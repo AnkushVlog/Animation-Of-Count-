@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h2>Calculetor</h2>
+        </div>
+        <div class="child">
+            <input type="display" id="disply" >
+        </div>  
+        <div class="numbrbtn">
+            <table>
+                <tr>
+                    <td>
+                    <button id="one" value=1 onclick="numdispy(one.value)">1</button>
+                    </td>
+                        <td>
+                            <button id="two" value=2 onclick="numdispy(two.value)">2</button>
+                        </td>
+                        <td>
+                            <button id="three" value=3 onclick="numdispy(three.value)">3</button>
+                        </td>
+                        <td>
+                            <button id="add" value=+ onclick="numdispy(add.value)">+</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                    <button id="four" value=4 onclick="numdispy(four.value)">4</button>
+                    </td>
+                        <td>
+                            <button id="five" value=5 onclick="numdispy(five.value)">5</button>
+                        </td>
+                        <td>
+                            <button id="six" value=6 onclick="numdispy(six.value)">6</button>
+                        </td>
+                        <td>
+                            <button id="subtrct" value=- onclick="numdispy(subtrct.value)">-</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                    <button id="seven" value=7 onclick="numdispy(seven.value)">7</button>
+                    </td>
+                        <td>
+                            <button id="eight" value=8 onclick="numdispy(eight.value)">8</button>
+                        </td>
+                        <td>
+                            <button id="nine" value=9 onclick="numdispy(nine.value)">9</button>
+                        </td>
+                        <td>
+                            <button id="equl" onclick="outputt()">Total</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                    <button id="multply" value=* onclick="numdispy(multply.value)">X</button>
+                    </td>
+                        <td>
+                            <button id="divide" value=/ onclick="numdispy(divide.value)">/</button>
+                        </td>
+                        <td>
+                            <button id="zero" value=0 onclick="numdispy(zero.value)">0</button>
+                            
+                        </td>
+                        <td>
+                            <button id="reset" value="rst" onclick="diplay.value=''">reset</button>
+                        </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+<script>
+    //  let ak=document.getElementById('one').value;
+    //  let doo=document.getElementById('two').value;
+    //  let tin=document.getElementById('three').value;
+    //  let char=document.getElementById('four').value;
+    //  let pach=document.getElementById('five').value;
+    //  let che=document.getElementById('six').value;
+    //  let sat=document.getElementById('seven').value;
+    //  let athe=document.getElementById('eight').value;
+    //  let noo=document.getElementById('nine').value;
+    //  let anda=document.getElementById('zero').value;
+    //  let total=document.getElementById('equl').value;
+    //  let jodna=document.getElementById('add').value;
+    //  let gtana=document.getElementById('subtrct').value;
+    //  let bhag=document.getElementById('divide').value;
+    //  let guna=document.getElementById('multply').value;
+    //  let dubrase=document.getElementById('reset').value;
+    
+    
+    let diplay=document.getElementById('disply');
+    let numdispy=(n1)=>{
+    
+    diplay.value=diplay.value+n1;    
+
+ }
+
+ let outputt=()=>
+ {
+    diplay.value=eval(diplay.value);
+ }
+
+
+
+</script>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+
+    text-align: center;
+    background-color: cadetblue;
+    display: grid;
+    width: fit-content;
+    border-radius: 10px solid black;
+
+}
+
+
+.numbtn table{
+  width: auto;
+  height: auto;
+  margin: %;
+  padding: 10%;
+}
+
+
+
+
+
+</style>
+
+
+</body>
+</html>
