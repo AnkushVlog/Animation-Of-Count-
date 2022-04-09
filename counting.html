@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(180, 121, 121);
+    }
+</style>
+<body>
+    <div class="main">
+        <i class="fa fa-car fa-5x"></i>
+       <h1><div class="counter" data-target="4000"></div></h1>
+    
+        <i class="fab fa-angrycreative fa-5x"></i>
+        <h1><div class="counter" data-target="1500"></div></h1>
+    
+        <i class="fas fa-angry fa-5x"></i>
+        <h1><div class="counter" data-target="5000"></div></h1>
+    </div>  
+    <div class="Note">
+
+    </div>
+    <script>
+        let a=document.querySelectorAll('.counter');
+        a.forEach((counter) => {
+            //    console.log(counter);
+            counter.innerHTML=0;
+             let countingtorun=()=>{
+                 let ttdata=+counter.getAttribute('data-target');
+                //   console.log(typeof ttdata);
+                let checkk=+counter.innerHTML;
+                // console.log(checkk);
+                let solv=ttdata/100;
+                // console.log(solv);
+             if(checkk<ttdata) {
+                 counter.innerHTML = `${solv+checkk}`;
+                 setTimeout(countingtorun, 1000)
+                }
+            }   
+        countingtorun();
+                          
+        });
+        
+
+    </script>
+</body>
+</html>
